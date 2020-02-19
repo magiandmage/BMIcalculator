@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 double hightnumber_double = Double.valueOf(hightnumber.getText().toString());
                 double weightnumber_double = Double.valueOf(weightnumber.getText().toString());
                 double BMI = calcBMI(hightnumber_double, weightnumber_double);
-                String result = String.format("%f" , BMI);
+                String result = String.format("%.2f" , BMI);
                 kekka.setText(result);
             }
         });
