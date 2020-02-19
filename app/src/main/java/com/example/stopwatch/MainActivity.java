@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         execCalcBMI.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                double hightnumber_double = Double.valueOf(hightnumber.getText().toString());
+                double weightnumber_double = Double.valueOf(weightnumber.getText().toString());
 
             }
         });
