@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Stopwatch</string>
+    <string name="hight">身長（cm）</string>
+    <string name="bmi">BMI</string>
+    <string name="weight">体重（kg）</string>
+    <string name="button">計算開始</string>
+</resources>
