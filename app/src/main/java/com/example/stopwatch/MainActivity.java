@@ -28,9 +28,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 double hightnumber_double = Double.valueOf(hightnumber.getText().toString());
                 double weightnumber_double = Double.valueOf(weightnumber.getText().toString());
-
+                double BMI = calcBMI(hightnumber_double, weightnumber_double);
             }
         });
-
+    }
+    //BMI算出
+    private double calcBMI( double h, double w ){
+        double bmi= 0;
+        if(h > 0 && w > 0 ){
+            bmi =  w / (h * h);
+        }
+        return bmi;
     }
 }
