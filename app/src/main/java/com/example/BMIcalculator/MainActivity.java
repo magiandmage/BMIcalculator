@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 double BMI = calcBMI(hightnumber_double, weightnumber_double);
                 String result = String.format("%.2f" , BMI);
                 kekka.setText(result);
-                String HYOUKA = "ちゃんと測ってえらい！！";
+                String HYOUKA = "ちゃんと測ってえら～い！！";
                 String hyoukabun = String.format("%s",HYOUKA );
                 hyouka.setText(hyoukabun);
             }
