@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private Button execCalcBMI;      //計算開始ボタンへの参照
+    private Button buttun;      //計算開始ボタンへの参照
     private EditText hightnumber;   //身長入力欄への参照
     private EditText weightnumber;  //体重入力欄への参照
     private TextView kekka;         //BMI結果への参照
@@ -20,13 +20,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        execCalcBMI = findViewById(R.id.button);  //ボタンの参照を取得
+        buttun = findViewById(R.id.button);  //ボタンの参照を取得
         hightnumber = findViewById(R.id.hightnumber); //身長入力欄の参照を取得
         weightnumber = findViewById(R.id.weightnumber); //体重入力欄の参照を取得
         kekka = findViewById(R.id.kekka); //BMI結果表示欄の参照を取得
 
 
-        execCalcBMI.setOnClickListener(new View.OnClickListener(){
+        buttun.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 double hightnumber_double = Double.valueOf(hightnumber.getText().toString());
