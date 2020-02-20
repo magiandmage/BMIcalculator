@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 double BMI = calcBMI(hightnumber_double, weightnumber_double);
                 String result = String.format("%.2f" , BMI);
                 kekka.setText(result);
-                String HYOUKA = "";
+                String HYOUKA = "ちゃんと測ってえらい！！";
                 String hyoukabun = String.format("%s",HYOUKA );
                 hyouka.setText(hyoukabun);
             }
@@ -49,20 +49,5 @@ public class MainActivity extends AppCompatActivity {
             bmi =  w / (h * h) * 10000;
         }
         return bmi;
-    }
-
-    //評価文分岐
-    void bun (double bmi){
-
-        if(bmi > 25.0){
-           System.out.print("でぶ");
-        }
-        else if(bmi < 18.5){
-            System.out.print("ほっそ");
-        }
-        else{
-            System.out.print("ふつー");
-        }
-
     }
 }
