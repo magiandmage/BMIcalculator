@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView kekka;         //BMI結果への参照
     private TextView hyouka;        //評価への参照
 
+    double bmi= 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +38,25 @@ public class MainActivity extends AppCompatActivity {
                 double BMI = calcBMI(hightnumber_double, weightnumber_double);
                 String result = String.format("%.2f" , BMI);
                 kekka.setText(result);
-                String HYOUKA = "ちゃんと測ってえら～い！！";
-                hyouka.setText(HYOUKA);
+
+
+                //評価文
+                String HYOUKA ="";
+
+                    if (25.0 < bmi) {
+                        HYOUKA = "ダイエットしようね";
+                    } else if (18.5 > bmi) {
+                        HYOUKA = "もっと食べようね";
+                    } else {
+                        HYOUKA = "標準だよ、えら～い！";
+                    }
+                    hyouka.setText(HYOUKA);
             }
         });
     }
     //BMI算出
      double calcBMI( double h, double w ){
-        double bmi= 0;
+
         if(h > 0 && w > 0 ){
             bmi =  w / (h * h) * 10000;
         }
