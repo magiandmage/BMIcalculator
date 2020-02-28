@@ -1,8 +1,13 @@
 apply plugin: 'com.android.application'
+apply plugin: 'realm-android' //Realm実装
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
+    compileOptions { //Realm
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     defaultConfig {
         applicationId "com.example.BMIcalculator"
         minSdkVersion 15
@@ -20,6 +25,7 @@ android {
 }
 
 dependencies {
+    implementation 'io.realm:android-adapters:2.1.1' //realm
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
