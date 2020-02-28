@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import io.realm.Realm;
+
 
 public class MainActivity extends AppCompatActivity {
     private Button buttun;      //計算開始ボタンへの参照
@@ -25,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Realm.init(this); //realm初期化
-        Realm realm = Realm.getDefaultInstance();
+        
 
         buttun = findViewById(R.id.button);  //ボタンの参照を取得
         hightnumber = findViewById(R.id.hightnumber); //身長入力欄の参照を取得
