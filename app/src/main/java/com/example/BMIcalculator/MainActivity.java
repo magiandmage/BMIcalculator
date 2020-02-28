@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 String HYOUKA ="";
 
                     if (25.0 < bmi) {
-                        HYOUKA = "既に潰れているっ！！！";
+                        HYOUKA = "既に潰れている！！！";
                     } else if (18.5 > bmi) {
                         HYOUKA = "再建の余地無しっ！！！";
                     } else {
